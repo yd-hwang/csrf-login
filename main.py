@@ -32,6 +32,12 @@ def login():
     session["csrf_token"] = csrf
     return render_template_string(login_form, csrf=csrf)
 
+@app.route("/profile")
+def profile():
+    if "csrf_token" not in session:
+        return redirect(url_for("login"))
+    return "<h2>This is a protected profile page!</h2>"
+
 @app.route("/")
 def home():
     return redirect(url_for("login"))
