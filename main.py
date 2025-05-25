@@ -63,6 +63,9 @@ profile_page = """
     <div class="info"><strong>Location:</strong> Seoul, South Korea</div>
     <div class="info"><strong>About:</strong> A passionate and creative 20-something who loves turning complex ideas into elegant designs. Always curious, always learning.</div>
 </div>
+<form method="POST" action="/logout">
+        <button>Log out</button>
+    </form>
 </body>
 </html>
 """
